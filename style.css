@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .titulo{
+  
+    }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .currentPlayer {
+    margin-top: 10px;
+    font-weight: bold;
+    height: 3px;
+    background: black;
+    margin-bottom: 100px;
+  }
+  
+  .game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 30%;
+    margin-top: 50px;
+    margin-left: 620px;
+  }
+  
+  .game button {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 50px;
+    background:  #32a6c0de;
+    color:#dc4fb9;
+    width: 150px;
+    height: 150px;
+  }
+  .container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubles{
+    position:relative;
+    display: flex;
+}
+
+.bubles span
+{
+    position:relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubles span:nth-child(even) 
+{
+    background: #dc4fb9;
+    box-shadow:  0 0 0 10px #b907b9,
+    0 0 50px #0c9c59,
+    0 0  100px #e98a0e;
+}
+@keyframes animate{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
